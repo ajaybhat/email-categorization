@@ -1,0 +1,94 @@
+<html>
+<head>
+    <title>Email App</title>
+    <style>
+        #email_form {
+            font-family: Calibri, serif;
+            display: block;
+            border: 8px groove #ddd;
+            border-radius: 25px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .form_elements {
+            list-style-type: none;
+        }
+
+        .float_r {
+            float: right;
+            border: 2px solid blue;
+            border-radius: 1000px;
+            width: 300px;
+            padding: 0 10px 0 10px;
+        }
+
+        .float_r:focus {
+            border: 2px solid red;
+        }
+
+        span {
+            margin: 0 10px 0 350px;
+        }
+
+        li {
+            padding: 7px 0 7px 0;
+            margin: 0 350px 0 10px;
+        }
+
+        #heading {
+            border: 8px groove #ddd;
+            border-radius: 25px;
+            margin: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: red;
+            font-style: Cambria;
+        }
+
+        #email_text {
+            height: 60px;
+            width: 500px;
+            border-left: 20%;
+            border-right: 20%;
+
+        }
+
+        #submit_button {
+            margin-left: 50%;
+            margin-right: 50%;
+            border: 2px groove #ddd;
+            border-radius: 1000px;
+            background: red;
+            color: white;
+            height: 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id='container'>
+    <div id='heading'>
+        <h1>EMAIL APP</h1>
+    </div>
+    <form id='email_form' action="/emailsubmit" method="post">
+        <ul>
+            <li class='form_elements'><span>From : </span><input type='text' id='from' name='from' class='float_r'
+                                                                 required/></li>
+            <li class='form_elements'><span>To : </span><input type='text' id='to' name='to'
+                                                               class='float_r' required/></li>
+            <li class='form_elements'><span>Subject : </span><input type='text' id='subject' name='subject'
+                                                                    class='float_r' required/></li>
+            <li class='form_elements'><span>Email Text : </span><textarea id="email_text" form="email_form"
+                                                                          name='email_text'
+                                                                          class="float_r" required></textarea></li>
+        </ul>
+        <br/>
+        <br/>
+        <input type='submit' id='submit_button' value='Submit Email'/>
+    </form>
+</div>
+</body>
+</html>
